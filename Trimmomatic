@@ -1,0 +1,26 @@
+wget
+
+#Start java using code
+
+module load apps/java
+
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_GRmut_1.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_GRmut_1_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+     
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_GRmut_2.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_GRmut_2_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_GRmut_3_1.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_GRmut_3_1_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_GRmut_3_2.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_GRmut_3_2_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_GRmut_4.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_GRmut_4_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_WTTL_1.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_WTTL_1_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_WTTL_2.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_WTTL_2_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_WTTL_3.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_WTTL_3_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 /data/mdt16j/RNAseq_May2019/GR_WTTL_Larvae/Larvae_WTTL_4.fastq.gz  /fastdata/mdt16j/Trimmomatic_Files/Larvae_WTTL_4_Trimmed.fastq.gz ILLUMINACLIP:Trimmomatic-0.39/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+#Others were done individually - completed interactively
+
