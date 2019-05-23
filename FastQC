@@ -1,0 +1,25 @@
+#FastQC Analysis
+
+Download fastqc using:
+
+wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
+
+unzip fastqc_v0.11.5.zip
+
+chmod 755 fastqc
+
+/fastdata/`whoami`/FastQC/fastqc
+
+export PATH=$PATH:/fastdata/`whoami`/FastQC
+
+#I created a folder with all RNAseq files in
+mkdir RNAseq_May2019
+
+Merge files using:
+
+cat file1 file2 > filemerged
+
+#Running fastqc on files ( you have to be in the folder that fastqc command is saved in):
+
+fastqc /fastdata/mdt16j/RNAseq_May2019/*
+
