@@ -6,4 +6,41 @@ git clone https://github.com/alexdobin/STAR.git
 
 cd STAR/source
 make STAR
+export PATH=$PATH:/fastdata/mdt16j/STAR/bin/Linux_x86_64_static/
+
+#make a folder called genome in STAR folder and download reference genome
+
+mkdir genome
+wget ftp://ftp.ensembl.org/pub/release-96/fasta/danio_rerio/dna/Danio_rerio.GRCz11.dna.toplevel.fa.gz
+
+#in STAR folder download the annotations for the genome (gtf)
+wget ftp://ftp.ensembl.org/pub/release-96/gtf/danio_rerio/Danio_rerio.GRCz11.96.gtf.gz
+
+#unzip both .gz files using:
+gunzip 
+
+#make a nano script for indexing using:
+
+nano readmernaSTARindex.sh
+
+#$ #!/bin/bash
+
+#$ -l h_rt=94:00:00	
+
+#$ -l rmem=32G	
+
+#$ -m bea 
+#$ -M jpaveley1@sheffield.ac.uk
+
+#$ -j y	
+
+#$ STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /fastdata/mdt16j/STAR/genome --genomeFastaFiles /fastdata/mdt16j/STAR/genome/Danio_rerio.GRCz11.dna.toplevel.fa --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf
+
+#Click the Ctrl O and enter to save, and Ctrl X to exit nano
+
+# I actually ran it interactively.
+
+STAR --runMode genomeGenerate --genomeDir /fastdata/mdt16j/STAR/genome --genomeFastaFiles /fastdata/mdt16j/STAR/genome/Danio_rerio.GRCz11.dna.toplevel.fa --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf
+
+
 
