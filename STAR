@@ -1,0 +1,9 @@
+#get STAR using:
+
+git clone https://github.com/alexdobin/STAR.git
+
+#install STAR using:
+
+cd STAR/source
+make STAR
+
