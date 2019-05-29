@@ -19,28 +19,33 @@ wget ftp://ftp.ensembl.org/pub/release-96/gtf/danio_rerio/Danio_rerio.GRCz11.96.
 #unzip both .gz files using:
 gunzip 
 
-#make a nano script for indexing using:
-
-nano readmernaSTARindex.sh
-
-#$ #!/bin/bash
-
-#$ -l h_rt=94:00:00	
-
-#$ -l rmem=32G	
-
-#$ -m bea 
-#$ -M jpaveley1@sheffield.ac.uk
-
-#$ -j y	
-
-#$ STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /fastdata/mdt16j/STAR/genome --genomeFastaFiles /fastdata/mdt16j/STAR/genome/Danio_rerio.GRCz11.dna.toplevel.fa --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf
-
-#Click the Ctrl O and enter to save, and Ctrl X to exit nano
-
 # I actually ran it interactively.
+qrsh -l rmem=32G
 
-STAR --runMode genomeGenerate --genomeDir /fastdata/mdt16j/STAR/genome --genomeFastaFiles /fastdata/mdt16j/STAR/genome/Danio_rerio.GRCz11.dna.toplevel.fa --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf
+#run STAR in genome folder
 
+cd /fastdata/mdt16j/STAR/genome
 
+export PATH=$PATH:/fastdata/mdt16j/STAR/genome
+
+STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /fastdata/mdt16j/STAR/genome --genomeFastaFiles /fastdata/mdt16j/STAR/Danio_rerio_GRCz11_primary_assembly.fa --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --sjdbOverhang 100 
+
+#May 29 10:06:11 ..... started STAR run
+#May 29 10:06:11 ... starting to generate Genome files
+#May 29 10:06:45 ... starting to sort Suffix Array. This may take a long time...
+#May 29 10:06:54 ... sorting Suffix Array chunks and saving them to disk...
+#May 29 10:47:18 ... loading chunks from disk, packing SA...
+#May 29 10:48:00 ... finished generating suffix array
+#May 29 10:48:00 ... generating Suffix Array index
+#May 29 10:50:09 ... completed Suffix Array index
+#May 29 10:50:09 ..... processing annotations GTF
+#May 29 10:50:17 ..... inserting junctions into the genome indices
+#May 29 10:55:49 ... writing Genome to disk ...
+#May 29 10:55:54 ... writing Suffix Array to disk ...
+#May 29 10:56:58 ... writing SAindex to disk
+#May 29 10:57:07 ..... finished successfully
+
+#Run STAR on 1 sample to test
+
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_MRmut_1_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
