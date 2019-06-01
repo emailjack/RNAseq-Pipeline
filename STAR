@@ -79,19 +79,21 @@ export PATH=$PATH:/fastdata/mdt16j/STAR/bin/Linux_x86_64_static/
 
 export PATH=$PATH:/fastdata/mdt16j/STAR/genome
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_MRmut_2_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_MRmut_1_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_MRmut_1 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_MRmut_3_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_MRmut_2_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_star_Larvae_MRmut_2 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_MRmut_4_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_MRmut_3_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_star_Larvae_MRmut_3 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTAB_1_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_MRmut_4_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_MRmut_4 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTAB_2_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTAB_1_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_WTAB_1 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTAB_3_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTAB_2_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_WTAB_2 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTAB_4_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTAB_3_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_WTAB_3 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTAB_4_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_WTAB_4 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
 #Run script for GRlarvae
 
@@ -110,21 +112,21 @@ export PATH=$PATH:/fastdata/mdt16j/STAR/bin/Linux_x86_64_static/
 
 export PATH=$PATH:/fastdata/mdt16j/STAR/genome
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_GRmut_1_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_GRmut_1_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_GRmut_1 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_GRmut_2_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_GRmut_2_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_GRmut_2 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_GRmut_3_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_GRmut_3_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_GRmut_3 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_GRmut_4_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_GRmut_4_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_GRmut_4 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTTL_1_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTTL_1_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_WTTL_1 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTTL_2_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTTL_2_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_WTTL_2 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTTL_3_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTTL_3_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_WTTL_3 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTTL_4_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Larvae_WTTL_4_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Larvae_WTTL_4 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
 #Run script for GR Brains
 
@@ -143,19 +145,28 @@ export PATH=$PATH:/fastdata/mdt16j/STAR/bin/Linux_x86_64_static/
 
 export PATH=$PATH:/fastdata/mdt16j/STAR/genome
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_GRmut_1_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_GRmut_1_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Brain_GRmut_1 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_GRmut_2_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_GRmut_2_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Brain_GRmut_2 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_GRmut_3_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_GRmut_3_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Brain_GRmut_3 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_WTTL_1_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_GRmut_4_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Brain_GRmut_4 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_WTTL_2_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_WTTL_1_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Brain_WTTL_1 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_WTTL_3_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_WTTL_2_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Brain_WTTL_2 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
 
-STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_WTTL_4_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_WTTL_3_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Brain_WTTL_3 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+
+STAR --runThreadN 1 --genomeDir /fastdata/mdt16j/STAR/genome/ --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --readFilesIn /fastdata/mdt16j/sortmerna-2.1/RNAseq_trim_sort/Brain_WTTL_4_Trimmed_rRNA.fastq --outSAMtype BAM SortedByCoordinate Unsorted --outFileNamePrefix /fastdata/mdt16j/STAR/star_Brain_WTTL_4 --outSAMunmapped Within --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic
+
+
+
+
+
+
+
 
 
 
