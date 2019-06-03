@@ -1,0 +1,18 @@
+#Open Ensembl Biomart
+
+https://www.ensembl.org/biomart/martview/0fadf87cece7749351d1f6bfb2963dbb
+
+#Choose Ensembl Genome 96
+
+#Zebrafish Genes GRCz11
+
+#Click on Filters
+#Gene stable ID
+#Copy and paste the coulm of gene names in
+#Click Gene stable ID
+#Click Gene name
+#Click Results
+#Click file csv -> Go
+
+Open in Excel, filter for ascending. Copy the gene name the column.
+
