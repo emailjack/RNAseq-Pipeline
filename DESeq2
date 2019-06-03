@@ -1,0 +1,84 @@
+#Download RStudio
+#Download R 3.6
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
++     install.packages("BiocManager")
+BiocManager::install("DESeq2")
+
+library(DESeq2)
+
+#Download all the files with extention ReadsPerGene.out.tab
+#Open them with textedit
+#Open Excel document - copypaste them in and line them up. First column in GeneID, each column after choose the final column of gene counts as these are strand-specific and typical for Truseq cDNA library prep: WT_1, WT_2, WT_3, WT_4, MR_1 etc.
+#Save them as MR_Larvae_RNAseq_Counts.txt files
+
+cts <- read.table("~/Downloads/MR_Larvae_RNAseq_Counts.txt")
+
+#in excel sheet make a table with the column metadata. i.e. column 1: No title, WT_1 etc  column 2: genotype, WT,WT,WT,WT,MRmut,MRmut,MRmut,MRmut
+#save as a MR_Larvae_metadata.txt.txt
+
+coldata <- read.table("~/Downloads/MR_Larvae_metadata.txt")
+
+#check to see what it looks like
+coldata
+       Genotype
+WTAB_1  Control
+WTAB_2  Control
+WTAB_3  Control
+WTAB_4  Control
+MR_1   MRmutant
+MR_2   MRmutant
+MR_3   MRmutant
+MR_4   MRmutant
+
+head(cts)
+                   WTAB_1 WTAB_2 WTAB_3 WTAB_4 MR_1 MR_2 MR_3 MR_4
+ENSDARG00000102141    235    244    239    163  222  163  239  192
+ENSDARG00000102123    111    118    128     87   71   26   86   73
+ENSDARG00000114503    547    507    548    268  332  277  366  313
+ENSDARG00000115971     17     27     28      4   25   10   29   19
+ENSDARG00000098311    369    462    382    201  208  106  284  256
+ENSDARG00000104839    597    647    607    284  572  167  420  346
+
+dds <- DESeqDataSetFromMatrix(countData = cts,colData = coldata,design = ~Genotype)
+
+#this sorts out the rows that have 0 transcripts in.
+
+dds <- DESeq(dds)
+#estimating size factors
+#estimating dispersions
+#gene-wise dispersion estimates
+#mean-dispersion relationship
+#final dispersion estimates
+#fitting model and testing
+
+results(dds,alpha = 0.05)
+#log2 fold change (MLE): Genotype MRmutant vs Control 
+#Wald test p-value: Genotype MRmutant vs Control 
+#DataFrame with 25826 rows and 6 columns
+
+MR_Larvae <- results(dds,alpha = 0.05)
+
+head(MR_Larvae)
+                     baseMean      log2FoldChange
+                          <numeric>           <numeric>
+ENSDARG00000102141 210.618278078157   0.233446501907278
+ENSDARG00000102123 82.5899491441188  -0.530153403108633
+ENSDARG00000114503 379.881194970705  -0.135669139762823
+ENSDARG00000115971 18.3135216542112   0.523097269733572
+ENSDARG00000098311  263.01590965548  -0.400293733362876
+
+#MR_Larvae is for all genes so those that are signif and those that arent
+
+setwd('~/Documents/PHD/')
+
+#This saves the table as a  csv that you can open on excel. Saved in PhD folder
+write.csv(as.data.frame(MR_Larvae), file = "WTAB_MRmut.csv")
+
+#Filter out all those that are significantly differentially expressed
+
+MR_Larvae_Sig <- subset(MR_Larvae,padj<0.05)
+
+write.csv(as.data.frame(MR_Larvae_Sig), file = "WTAB_MRmutSignificant.csv")
+
+
