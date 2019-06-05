@@ -19,3 +19,30 @@ MR_log <- rlog(dds, blind = TRUE)
 
 plotPCA(MR_log, intgroup="Genotype")
 
+#This automatically plots the 500 genes. To plot a different amount add ntop in.
+
+plotPCA(MR_log, intgroup="Genotype", ntop=100)
+
+
+#To plot PCA4 and PC4, first make a new matrix of all PCAs from normalised MR_dds
+
+MR_logmatrix <- assay(MR_log)
+MR_pca <- prcomp(t(MR_logmatrix))
+df <- cbind(meta, MR_pca$x)
+
+#Then choose to plot a PC3 and PC4 by genotype in ggplot
+
+df <- cbind(MR_coldata, MR_pca$x)
+ggplot(df) + geom_point(aes(x=PC3, y=PC4, color = Genotype))
+
+
+
+
+#To make a Heatmap of Variation to see if your samples cluster together
+
+install.packages("pheatmap")
+library(pheatmap)
+MR_cor <- cor(MR_logmatrix)
+pheatmap(MR_cor)
+
+
