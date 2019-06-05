@@ -1,0 +1,21 @@
+#To make a PCA plot
+
+#In RStudio
+
+#setwd
+
+library(DESeq2)
+
+#download raw count file and column metadata file
+MR_cts <- read.table("~/Documents/PHD/RNAseq May 2019/MR_Larvae_Counts.txt")
+MR_coldata <- read.table("~/Documents/PHD/RNAseq May 2019/MR Larvae metadata.txt")
+
+#Make a Deseq2 datafile
+
+MR_dds <- DESeqDataSetFromMatrix(countData = MR_cts,colData = MR_coldata,design = ~Genotype)
+
+#log transform raw counts to normalise transcript library
+MR_log <- rlog(dds, blind = TRUE)
+
+plotPCA(MR_log, intgroup="Genotype")
+
