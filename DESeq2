@@ -81,4 +81,25 @@ MR_Larvae_Sig <- subset(MR_Larvae,padj<0.05)
 
 write.csv(as.data.frame(MR_Larvae_Sig), file = "WTAB_MRmutSignificant.csv")
 
+#To plot individual genes normalised count graphs use:
+
+plotCounts(dds, "ENSDARG00000102082", intgroup="Genotype")
+
+#If you want to label the plotcounts, load these libraries:
+library(tidyverse)
+library(ggplot2)
+library(ggrepel)
+library(DEGreport)
+library(RColorBrewer)
+library(DESeq2)
+library(pheatmap)
+
+d <- plotCounts(dds, "ENSDARG00000102082", intgroup="Genotype")
+
+ggplot(d, aes(x = sampletype, y = count, color = sampletype)) + 
+  geom_point(position=position_jitter(w = 0.1,h = 0)) +
+  geom_text_repel(aes(label = rownames(d))) + 
+  theme_bw() +
+  ggtitle("nr3c2") +
+  theme(plot.title = element_text(hjust = 0.5))
 
