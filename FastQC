@@ -1,10 +1,27 @@
 #FastQC Analysis
 
-Download fastqc using:
+#I created a folder with all RNAseq files in
+mkdir RNAseq_May2019
+
+#Merge files using:
+
+cat file1 file2 > filemerged
+
+#Download fastqc using:
 
 wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
 
 unzip fastqc_v0.11.5.zip
+
+#Download java
+
+module load apps/java
+
+#check java version using
+
+java -version
+
+#Open FastQC folder using cd command.
 
 chmod 755 fastqc
 
@@ -12,12 +29,7 @@ chmod 755 fastqc
 
 export PATH=$PATH:/fastdata/`whoami`/FastQC
 
-#I created a folder with all RNAseq files in
-mkdir RNAseq_May2019
 
-Merge files using:
-
-cat file1 file2 > filemerged
 
 #Running fastqc on files ( you have to be in the folder that fastqc command is saved in):
 
