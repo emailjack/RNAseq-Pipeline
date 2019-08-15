@@ -26,7 +26,7 @@ qrsh -l rmem=32G
 
 cd /fastdata/mdt16j/STAR/genome
 
-export PATH=$PATH:/fastdata/mdt16j/STAR/genome
+export PATH=$PATH:/fastdata/mdt16j/STAR/bin/Linux_x86_64_static/
 
 STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /fastdata/mdt16j/STAR/genome --genomeFastaFiles /fastdata/mdt16j/STAR/Danio_rerio_GRCz11_primary_assembly.fa --sjdbGTFfile /fastdata/mdt16j/STAR/Danio_rerio.GRCz11.96.gtf --sjdbOverhang 100 
 
